@@ -19,3 +19,7 @@ void matrix2d::out(char* s) {
 	cout << s << endl;
 	out();
 }
+void matrix2d::copy(float* s) {
+	int nm = N * M;
+	for (int i = 0; i < nm; i++) mm[i] = s[i];
+}
