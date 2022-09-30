@@ -1,5 +1,4 @@
-# matrixClass
-matrix class 
-out : cout the matrix
-add : add two matrices
-mult : multiply two matrices
+# coding artist
+Processing codes
+c*   game coding
+m*   math coding
