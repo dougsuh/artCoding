@@ -1,5 +1,6 @@
 void setup(){
   size(200,200);
+  fill(255);
   circle(100,100,100);  // face
   circle(80,90,20);  // left eye
   arc(120,90,20,20,PI,2*PI); // right eye
@@ -12,6 +13,7 @@ void setup(){
   float x,y;
   x = 50;
   y = 150;
+  fill(255);
   circle(x,y,100);  // face
   circle(x-20,y-10,20);  // left eye
   arc(x+20,y-10,20,20,PI,2*PI); // right eye
