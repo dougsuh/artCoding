@@ -14,15 +14,15 @@ void draw(){
   background(255,255,0);
   circle(x1,y1,2*r1);
   circle(x2,y2,2*r2);
-  if(mousePressed){
-    d = distance(mouseX,mouseY,x1,y1);
-    if(d<r1) r1 *= 0.5;
-    d = distance(mouseX,mouseY,x2,y2);
-    if(d<r2) r2 *= 0.5;
-  }
 }
 float distance(float a1, float b1, float a2, float b2){
   float dis;
   dis = sqrt((a1-a2)*(a1-a2)+(b1-b2)*(b1-b2));
   return dis;
+}
+void mouseReleased() {
+    d = distance(mouseX,mouseY,x1,y1);
+    if(d<r1) r1 *= 0.5;
+    d = distance(mouseX,mouseY,x2,y2);
+    if(d<r2) r2 *= 0.5;
 }
