@@ -15,11 +15,13 @@ void draw() {
   background(255, 255, 0);
   for (int i=0; i<10; i++) {
       circle(x[i], y[i], 2*r[i]);
-    if (mousePressed) {
-      d = distance(mouseX, mouseY, x[i], y[i]);
-      if (d<r[i]) r[i] *= 0.5;
-    }
   }
+}
+void mouseReleased() {
+  for (int i=0; i<10; i++) {
+    d = distance(mouseX, mouseY, x[i], y[i]);
+    if (d<r[i]) r[i] *= 0.5;
+  }  
 }
 float distance(float a1, float b1, float a2, float b2) {
   float dis;
