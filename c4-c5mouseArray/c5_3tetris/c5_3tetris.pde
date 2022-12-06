@@ -5,11 +5,11 @@ void setup() {
   hits = new int[6];
   cdf = new int[6];
   for (int i=0; i<6; i++) hits[i] = 0;
-  cdf[0] = 10;          
-  cdf[1] = cdf[0] + 15;
-  cdf[2] = cdf[1] + 15; 
-  cdf[3] = cdf[2] + 30;
-  cdf[4] = cdf[3] + 20; 
+  cdf[0] = 10;           // 10
+  cdf[1] = cdf[0] + 15;  // 25
+  cdf[2] = cdf[1] + 15;  // 40
+  cdf[3] = cdf[2] + 30;  // cdf[3]=70
+  cdf[4] = cdf[3] + 20;  // 90
   cdf[5] = 100;
   frameRate(4);
 }
