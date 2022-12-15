@@ -2,11 +2,11 @@ void setup(){
   student siha, nouk;  // 2 objects for class student
   siha = new student(); // set default values
   nouk = new student(); // set default values
-  print(siha.h + " " + siha.w + " \n"); // print member data
+  println(siha.h + " " + siha.w); // print member data
   siha.phen();         // call the member function
-  print(siha.r + "\n");
+  println(siha.r);
   nouk.w = 90;         // change value of a member data
   nouk.phen();  
-  print(nouk.h + " " + nouk.w + " \n");
-  print(nouk.r + "\n");
+  println(nouk.h + " " + nouk.w);
+  println(nouk.r);
 }
