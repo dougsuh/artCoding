@@ -2,8 +2,8 @@ class SihaBoy extends Siha{
   SihaBoy(float p, float q, float r){
     super(p,q,r);
   }
-  void show(){
-    Life();
+  void drawNecktie(){
+    drawFace();
     fill(0,0,122);
     circle(x-d/5, y-d/6, d/10); // pupil
     fill(255,0,0);
