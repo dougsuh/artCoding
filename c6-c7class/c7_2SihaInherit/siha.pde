@@ -4,7 +4,7 @@ class Siha {
     x = p;      y = q;     d = r;
   }
   float x, y, d;
-  void Life() {
+  void drawFace() {
     fill(255);
     ellipse(x, y, d, d/3*2);
     circle(x-d/5, y-d/6, d/5);
