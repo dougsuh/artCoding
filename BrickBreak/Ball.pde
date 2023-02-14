@@ -5,8 +5,10 @@ class Ball{
     sx = 5;
     sy = -5;
     d = 50;
+    ss = new sky(x,y,d);
   }
   float x,y,sx,sy,d;
+  sky ss;
   void move(){
     x += sx;
     y += sy;
@@ -15,7 +17,9 @@ class Ball{
   }
   void show(){
     fill(255,0,0);
-    circle(x,y,d);
+    //circle(x,y,d);
+    ss.x = x; ss.y = y;
+    ss.skyShow();
   }
   boolean checkBricks(Bricks bb){
     if(y > bb.Layers * bb.H) return false;
