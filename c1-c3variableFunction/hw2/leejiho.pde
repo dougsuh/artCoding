@@ -1,0 +1,24 @@
+void jiho(float x,float y,float d){
+  stroke(255,192,203);
+  fill(255,192,203);
+  circle(x,y,3*d);
+  triangle(x-13*d/10,y-3*d/4,x-33*d/25,y-31*d/20,x-13*d/20,y-27*d/20);
+  triangle(x+13*d/10,y-3*d/4,x+33*d/25,y-31*d/20,x+13*d/20,y-27*d/20);
+  fill(255,255,255);
+  circle(x-3*d/4,y-d/20,19*d/25);
+  circle(x+3*d/4,y-d/20,19*d/25);
+  fill(66,203,245);
+  circle(x-3*d/4,y-d/20,16*d/25);
+  circle(x+3*d/4,y-d/20,16*d/25);
+  fill(255,255,255);
+  circle(x-13*d/20,y-d/5,d/5);
+  circle(x+13*d/20,y-d/5,d/5);
+  fill(148,38,33);
+  triangle(x-6*d/5,y-9*d/10,x-5*d/4,y-37*d/25,x-3*d/4,y-13*d/10);
+  triangle(x+6*d/5,y-9*d/10,x+5*d/4,y-37*d/25,x+3*d/4,y-13*d/10);
+  fill(255,0,0);
+  arc(x,y+19*d/50,3*d/5,d/2,0,PI);
+  stroke(0,0,0);
+  fill(255,192,203);
+  arc(x,y-11*d/10,11*d/10,9*d/10,PI,2*PI);
+}
