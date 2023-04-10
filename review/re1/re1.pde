@@ -1,5 +1,4 @@
 void setup() {
-  boolean 
   size(800, 600);
   smile(100, 200, 100);
   smile(300, 200, 200);
