@@ -1,9 +1,21 @@
 void setup(){
-  size(600,600);
+  size(1000,700); 
+  float x,y;
+  x = 500;
+  y = 300;
   fill(255,0,0);
-  arc(300,200,300,200,PI,2*PI);
-  stroke(0,0,255);
-  strokeWeight(10);
-  line(300,200,300,400);
-  quad(300,400,350,400,340,420,310,420); 
+  stroke(0.0,255);
+  beginShape();
+  // star right
+  vertex(x,y-200);
+  vertex(x+50,y-100);
+  vertex(x+200,y-100);  
+  vertex(x+100,y);
+  vertex(x+200,y+100);  
+  vertex(x,y+50); 
+  vertex(x-200,y+100);
+  vertex(x-100,y);  
+  vertex(x-200,y-100);  
+  vertex(x-50,y-100);
+  endShape();
 }
