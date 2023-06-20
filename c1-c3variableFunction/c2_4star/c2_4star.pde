@@ -12,6 +12,7 @@ void setup(){
   vertex(x+200,y-100);  
   vertex(x+100,y);
   vertex(x+200,y+100);  
+  // star left
   vertex(x,y+50); 
   vertex(x-200,y+100);
   vertex(x-100,y);  
