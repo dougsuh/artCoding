@@ -11,8 +11,8 @@ void setup(){
 void setup(){
   size(200,200);
   float x,y;
-  x = 50;
-  y = 150;
+  x = 100;
+  y = 100;
   fill(255);
   circle(x,y,100);  // face
   circle(x-20,y-10,20);  // left eye
