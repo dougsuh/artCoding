@@ -1,18 +1,12 @@
-float ax, ay, ad; // object a
-float bx, by, bd; // object b
-float cx, cy, cd; // object c
 void setup(){
   size(600,300);
-  ax = 100;  ay = 100;  ad = 100;
-  Life(ax,ay,ad);
-  bx = 300;  by = 150;  bd = 150;
-  Life(bx,by,bd);
-  cx = 500;  cy = 200;  cd = 80;
-  Life(cx,cy,cd);
+  Life(100,100,10);
+  Life(300,150,15);
+  Life(500,200,8);
 }
-void Life(float x, float y, float d){
-  ellipse(x,y,d,d/3*2);
-  circle(x-d/5,y-d/6,d/5);
-  arc(x+d/5,y-d/6,d/5,d/5,PI,2*PI);
-  arc(x,y,d*2/3,d/5,0,PI);
+void Life(float x,float y, float d){
+  ellipse(x,y,d*10,d*6);
+  circle(x-d*2,y-d*1.5,d*2);
+  arc(x+d*2,y-d*1.5,d*2,d*2,PI,2*PI);
+  arc(x,y,d*6,d*2,0,PI);  
 }
