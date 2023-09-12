@@ -1,20 +1,19 @@
-//  method 1: 3 smiles with array no function
-smile [] aa;
-int [] oo;
+//  method 1: 3 smiles with class
+smile a1,a2,a3;
 void setup() {
   size(600, 300);
-  aa = new smile[4];
-  for (int i=0; i<3; i++) {
-    aa[i] = new smile(i);
-  }
-  aa[3] = new smile(0,0,3);
+  a1 = new smile(0);
+  a2 = new smile(0);
+  a3 = new smile(0);
 }
 void draw() {
   background(0, 255, 255);
-  for (int i=0; i<4; i++) {
-    aa[i].cam();
-    aa[i].bodia();  
-  }
+  a1.cam();
+  a1.bodia();
+  a2.cam();
+  a2.bodia();
+  a3.cam();
+  a3.bodia();
 }
 /*  3 smiles no function
  float a1, b1, c1, vx1, vy1;
