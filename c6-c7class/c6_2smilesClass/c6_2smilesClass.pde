@@ -3,8 +3,8 @@ smile a1,a2,a3;
 void setup() {
   size(600, 300);
   a1 = new smile(0);
-  a2 = new smile(0);
-  a3 = new smile(0);
+  a2 = new smile(1);
+  a3 = new smile(2);
 }
 void draw() {
   background(0, 255, 255);
