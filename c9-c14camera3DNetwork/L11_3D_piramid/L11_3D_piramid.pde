@@ -1,8 +1,9 @@
 void setup() {
-  size(300, 600, P3D);
-  translate(width/2,height/2,0);
-  camera(400,600,50,0,0,0,0,0,-1);
+  size(400, 200, P3D);
+  camera(200,300,50,0,0,0,0,0,-1);
   noFill();
+  piramid(TRIANGLE_STRIP);
+  translate(-800,-300,0);
   piramid(TRIANGLE_STRIP);
 }
 void piramid(int option){
