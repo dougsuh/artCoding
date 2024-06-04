@@ -5,7 +5,7 @@ class pp {  // moving player
   float x, y, z;
   void display(int i,en ne) {
     translate(i, 0, 0);
-    stroke(0, 0, 255);
+    fill(0, 0, 255);// 2024. 6. 5
     sphereDetail(10);
     sphere(30);
     translate(-i, 0, 0);
@@ -15,6 +15,7 @@ class pp {  // moving player
       strokeWeight(5);
       line(i, 0, 0, ne.x, 0, 0);
       strokeWeight(1);
+      noStroke(); // 2024. 6. 5
     }
   }
 }
