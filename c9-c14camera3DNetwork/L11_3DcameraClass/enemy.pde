@@ -13,8 +13,8 @@ class en {
   void display(int i) {
     translate(x, y, z);
     if (OP==0) rotateX(radians(i));
-    if(OP == 0) stroke(255, 0, 0);
-    else stroke(0,255, 0);
+    if(OP == 0) fill(255, 0, 0);
+    else fill(0,255, 0);
     box(50);  
     if (OP==0)rotateX(radians(-i));  
     translate(-x, -y, -z);// return to (0 0 0)
