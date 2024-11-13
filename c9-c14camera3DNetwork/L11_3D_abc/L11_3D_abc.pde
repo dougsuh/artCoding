@@ -1,15 +1,6 @@
-float x=0;
 void setup(){
   size(800,800,P3D);
-}
-void draw(){
-  background(255,255,0);
-  lights();
-  translate(x,0,0);
-  if(x>width) x = 0; else x += 5;
-  snowman();
-}
-void snowman(){
+  translate(400,0,0);
   fill(255); // default
   stroke(1); // default
   translate(0,200,0);
