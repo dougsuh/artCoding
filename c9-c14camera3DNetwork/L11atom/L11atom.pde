@@ -16,7 +16,7 @@ void draw() {
   if(angle > frameRate*20) angle = 0;  
 }
 void atom(){
-  rotateZ(2*PI*angle/(frameRate*20)); // rotation in 5sec
+  rotateZ(2*PI*angle/(frameRate*20)); // rotation in 20sec
   fill(255,0,0);
   translate(10,0,0);
   sphere(15);
@@ -27,7 +27,7 @@ void atom(){
   sphere(15);
   translate(0,-20,0);
   sphere(15);
-  rotateZ(-2*PI*angle/(frameRate*20)); // rotation in 5sec
+  rotateZ(-2*PI*angle/(frameRate*20)); // rotation in 20sec
 }
 void electron1(){  
   pushMatrix();
@@ -40,7 +40,7 @@ void electron1(){
     x1 = x2; z1 = z2;
   }
   noStroke();
-  rotateY(2*PI*angle/(frameRate*10));
+  rotateY(2*PI*angle/(frameRate*10));// rotation in 10sec
   translate(200,0,0);
   fill(255,255,0);
   sphere(10);
@@ -57,7 +57,7 @@ void electron2(){
     x1 = x2; y1 = y2;
   }
   noStroke();
-  rotateZ(2*PI*angle/(frameRate*20));
+  rotateZ(2*PI*angle/(frameRate*20));// rotation in 20sec
   translate(100,0,0);
   fill(255,255,0);
   sphere(5);
