@@ -1,4 +1,5 @@
 molecule [] mm;
+int angle = 0;
 void setup() {
   size(800, 800, P3D);
   camera(300, 300, 300, 0, 0, 0, -1, 0, 0);
@@ -12,6 +13,7 @@ void setup() {
 }
 void draw() {
   background(0);
+  angle++; if(angle> 10*frameRate) angle = 0;
   lights();
   for (int i=0; i<5; i++) {
     mm[i].move();

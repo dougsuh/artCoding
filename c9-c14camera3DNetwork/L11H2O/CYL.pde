@@ -3,9 +3,9 @@ class molecule {
     x = xx; y = yy; z = zz; 
     vx = vy = vz = 0;
     active = false;
-    if(x>10) { active = true; vx = -2; }
-    if(y>10)  { active = true; vy = -2;}
-    if(z>10)  { active = true; vz = -2;}
+    if(x>10) { active = true; vx = -1; }
+    if(y>10)  { active = true; vy = -1;}
+    if(z>10)  { active = true; vz = -1;}
   }
   float x, y, z, vx, vy, vz;
   boolean active;

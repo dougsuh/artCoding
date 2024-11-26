@@ -7,6 +7,8 @@ class H2O extends molecule {
       noStroke();
       translate(x, y, z);
       fill(255, 0, 0);
+      pushMatrix();
+      rotateZ(radians(angle*1.5));
       sphere(30);
       fill(0, 255, 0);
       translate(0, 25, 0);
@@ -18,6 +20,9 @@ class H2O extends molecule {
       sphere(10);
       translate(-50, 50, 0);
       sphere(10);
+      popMatrix();
+      textSize(50);
+      text("H2O",x,y,z);
       translate(-x, -y-50, -z);
     }
   }
