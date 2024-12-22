@@ -22,7 +22,6 @@ class en {
     translate(x, y, z);
     if (OP==0) rotateZ(radians(i));
     show(); // show the character
-    if (OP==0)rotateZ(radians(-i));
     popMatrix();    
   }
   // show the character
