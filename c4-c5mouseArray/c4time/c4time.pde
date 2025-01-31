@@ -1,7 +1,7 @@
 float a1, b1, vx1, vy1;
 float a2, b2, vx2, vy2;
 int oo1, oo2;
-int frames = 0;  // 0.1 sec / frame
+int frames = -5;  // 0.1 sec / frame
 void setup() {
   size(450, 300);
   a1 = a2 = 0; b1 = b2 = 50; oo1 = 1; oo2 = 2;
@@ -11,7 +11,7 @@ void setup() {
 void draw() {
   background(0, 255, 255);
   maze();
-  frames++;
+  if(frames > 0) frames++;
   if(frames == 40) {vx1 = 0; vy1 = 5;}
   else if (frames == 70){vx1 = 5; vy1 = 0;}
   else if (frames == 110){vx1 = 0; vy1 = 0;
