@@ -11,7 +11,6 @@ void setup() {
 void draw() {
   background(0, 255, 255);
   maze();
-  if(frames > 0) frames++;
   if(frames == 40) {vx1 = 0; vy1 = 5;}
   else if (frames == 70){vx1 = 5; vy1 = 0;}
   else if (frames == 110){vx1 = 0; vy1 = 0;
@@ -20,7 +19,9 @@ void draw() {
   else if (frames == 180){vx2 = 5; vy2 = 0;}
   else if (frames == 220){vx2 = 0; vy2 = 0;}
   else if (frames > 300) exit();
-  a1 += vx1; b1 += vy1;  a2 += vx2; b2 += vy2;  
-  smile(a1,b1,oo1);
-  smile(a2,b2,oo2);
+  if(frames>0){ frames++;
+    a1 += vx1; b1 += vy1;  a2 += vx2; b2 += vy2;  
+    smile(a1,b1,oo1);
+    smile(a2,b2,oo2);
+  }
 }
