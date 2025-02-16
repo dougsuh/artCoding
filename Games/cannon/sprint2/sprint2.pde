@@ -5,7 +5,6 @@ void setup() {
   c1 = new cannon(200, 300, 0);
   c2 = new cannon(800, 300, 1);
   b1 = new ball(c1);
-  c2.v = 600.0;
   b2 = new ball(c2);
 }
 void draw() {
