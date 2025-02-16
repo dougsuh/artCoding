@@ -15,18 +15,18 @@ class ball{
     float a;
     if(c.eastwest == 0) a = c.angle;
     else a = 180 - c.angle;
-    dt = 1./frameRate;
-    vx = c.v*cos(radians(a))*dt;
-    vy = c.v*sin(radians(a))*dt; 
+    dt = 1./frameRate*3; // fast forward
+    vx = c.v*cos(radians(a));
+    vy = c.v*sin(radians(a)); 
     alive = true;
     g = -10.0; // gravitational acceleration
   }
   float x,y,vx,vy,dt,g;
   boolean alive;
   void move(){
-    x += vx;
+    x += vx*dt;
     vy += g*dt;
-    y -= vy;
+    y -= vy*dt;
   }
   void display(){
     fill(0);
