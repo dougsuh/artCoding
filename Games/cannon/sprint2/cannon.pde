@@ -5,7 +5,7 @@ class cannon {
     y = yy;
     alive = true;
     eastwest = op;
-    v = 660;
+    v = 70+random(-10,10);
   }
   float x, y, v, angle;
   int eastwest;
