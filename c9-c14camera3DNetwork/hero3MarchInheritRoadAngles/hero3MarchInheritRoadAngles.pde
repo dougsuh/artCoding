@@ -1,5 +1,6 @@
 heroes [] hh;
 heroes [] pp;
+char kk = 'p'; // to select a view
 void setup(){
   size(600,800,P3D);
   hh = new heroes[60]; 
@@ -26,16 +27,15 @@ void setup(){
      hh[40+i+5*j] = new snowman(x,0,-2000-100*j,0);
     }
   }
-  //camera(100+width/2,-500,2000,width/2,0,0,0,1,0);//perspective
-  //camera(width/2,-1000,0,width/2,0,0,0,0,-1);//top
-  //camera(800+width/2,0,0,width/2,0,0,0,1,0);//side
-  camera(width/2+60,0,1000,width/2,0,0,0,1,0);//front
 }
 void draw(){
   background(135,206,250);
-  lights();
+  lights();  
   translate(width/2,0,0);
-  
+  if(kk=='p') camera(100,-500,2000,0,0,0,0,1,0);//perspective
+  else if(kk=='t') camera(0,-1000,0,0,0,0,0,0,-1);//top
+  else if(kk=='s') camera(800,0,0,0,0,0,0,1,0);//side
+  else if(kk=='f') camera(60,0,1000,0,0,0,0,1,0);//front
   road();
   for(heroes s : hh) {
     s.update();   s.show();
@@ -44,6 +44,7 @@ void draw(){
      s.show();
   }
 }
+void keyPressed(){   kk = key; }
 void road(){
   fill(200,100,50);
   pushMatrix();
