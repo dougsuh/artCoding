@@ -22,6 +22,7 @@ class pp {  // moving player
     translate(x, y, z);
     fill(0, 0, 255);// 2024. 6. 5
     sphereDetail(10);
+    rotate(PI);  // 2025. 3. 16
     show(); // show the character
     popMatrix();
   }
