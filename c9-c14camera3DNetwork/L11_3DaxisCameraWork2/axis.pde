@@ -10,12 +10,6 @@ void axis(){
   line(0,0,0,0,0,100);  // blue z
   strokeWeight(2);
   stroke(255,255,255);
-  // box
-  //noFill();
-  fill(255,200,120);
-  translate(20,30,40);
-  box(40,60,80);
-  translate(-20,-30,-40);
   // axis title
   fill(255,0,0);
   text("X",125,0,0);
@@ -23,4 +17,40 @@ void axis(){
   text("Y",0,125,0);
   fill(0,0,255);
   text("Z",0,0,125);
+}
+class snowman {
+  snowman() {
+    s = 30;
+    x = y = z = 0;
+  }
+  float x,y,z,s;
+  void show() {    
+    pushMatrix();
+    translate(x,y,z);
+    noStroke();
+
+    pushMatrix();
+    translate(0, -s * 0.5, 0);
+    fill(255);
+    sphere(s * 0.4);
+    popMatrix();
+
+    fill(0);
+    pushMatrix();
+    translate(-s* 0.16, -s * 0.55, s * 0.32);
+    sphere(s*0.06);
+    popMatrix();
+
+    pushMatrix();
+    translate(s* 0.16, -s * 0.55, s * 0.32);
+    sphere(s*0.06);
+    popMatrix();
+
+    pushMatrix();
+    translate(0, s * 0.2, 0);
+    fill(255);
+    sphere(s * 0.6);
+    popMatrix();
+    popMatrix();
+  }
 }
