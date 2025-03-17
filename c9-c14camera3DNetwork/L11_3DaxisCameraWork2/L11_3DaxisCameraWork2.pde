@@ -1,9 +1,11 @@
-// DougFO Play Jan. 22, 2022
+// DougFO Play March 17, 2025
 // target fixed,  affine transform to the camera
+// Snowman as the target 
 float rotX, rotY, transX, transY, scaleFactor;
 float cx,cy,cz;
 int i=0;
 cam cc;
+snowman ss;
 void setup(){
   size(400,300,P3D);
   frameRate(20);
@@ -11,11 +13,13 @@ void setup(){
   translate(width/2, height/2, 0);// OK
   rotX = rotY = transX = transY = 0;
   scaleFactor = 1.0;
+  ss = new snowman();
 }
 void draw(){
   lights();
   background(0);
   axis();
+  ss.show();
   cc.translate(transX,transY,0);
   cc.rotateX(rotX);
   cc.rotateY(rotY);
