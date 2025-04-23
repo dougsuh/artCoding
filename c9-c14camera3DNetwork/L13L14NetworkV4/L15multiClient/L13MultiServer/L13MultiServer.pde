@@ -1,7 +1,7 @@
 import processing.net.*;
 
 Server s1,s2; 
-Client c1,c2;
+Client c;
 String input;
 int data[];
 
@@ -11,13 +11,13 @@ void setup() {
   s2 = new Server(this, 12346);  
 } 
 void draw() {   
-  forward(c1,s1,s2);
-  forward(c2,s2,s1);
+  forward(s1,s2);
+  forward(s2,s1);
 }
-void forward(Client ct, Server st, Server sr){
-  ct = st.available();
-  if (ct != null) {
-    input = ct.readString(); 
+void forward(Server st, Server sr){
+  c = st.available();
+  if (c != null) {
+    input = c.readString(); 
     sr.write(input);
   }
 }
