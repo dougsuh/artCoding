@@ -21,7 +21,7 @@ class MMOServer {
       input = cc.readString();
       input = input.substring(0, input.indexOf("\n")); 
       data = int(split(input, ' '));
-      println(red+" "+data[0]+" "+data[1]+" "+players[data[0]].state);
+      // println(red+" "+data[0]+" "+data[1]+" "+players[data[0]].state);
       players[data[0]].move(data[1]);
       if(players[data[0]].check(x,y)) count++;
       if(count == N) return true;
@@ -29,3 +29,4 @@ class MMOServer {
     return false;
   }
 };
+
