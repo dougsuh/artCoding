@@ -27,6 +27,8 @@ class player {
     if(state == 2) return false;
     if (dist(x, y, xx, yy) < 65) {
       state = 2;
+      if(red) println( " Red  " + ID + " arrived. ");
+      else    println( " Blue " + ID + " arrived. ");
     }
     if (state == 2) return true;
     else return false;
@@ -35,3 +37,4 @@ class player {
     circle(x, y, 30);
   }
 }
+
