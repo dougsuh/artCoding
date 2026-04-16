@@ -1,4 +1,4 @@
-void setup() {
+void setup() {    // suh original without AI
   size(1800,600);
   background(0,255,255);
   int [] aa;
