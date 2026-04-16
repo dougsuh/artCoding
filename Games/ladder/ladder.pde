@@ -2,7 +2,7 @@ void setup() {
   size(1800,600);
   background(0,255,255);
   int [] aa;
-  int N = 20;
+  int N = 16;
   aa = new int[N];
   shuffle(N,aa);
   
@@ -28,13 +28,13 @@ void shuffle(int N, int [] aa) {
 }
 void ateam(float x,int teamNumber, int order){
   square(x,100,50);
-  square(x,height-200,50);
+  rect(x,height-200,70,50);
   textSize(40);
   fill(0,0,255);
   if(teamNumber == 1) text("order",x+5,65);
   text(teamNumber,x+5,135);
   fill(255,0,0);
   if(teamNumber == 1) text("teamNumber",x+5,height-220);
-  text(order,x+5,height-165);
+  text("T"+order,x+5,height-165);
   fill(255);
 }
