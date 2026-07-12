@@ -7,7 +7,7 @@ class guitar {
     int i, j;
     float x, fac, k, tmp;
     /* Calculate initial values based on sine curve */
-    fac = 2.0 * PI;
+    fac = 10.0 * PI;  // 2.0 original
     k = 0.0;
     tmp = tpoints - 1;                // 1 period
     for (j = 1; j <= tpoints; j++) {
@@ -47,24 +47,25 @@ class guitar {
    **************************************************************************/
   void do_math(int i)
   {
-    float dtime, c, dx, tau, sqtau;
+    float dtime, gamma, dx, tau, sqtau;
 
     //dtime = 0.3; // original;
-     dtime = 0.6;
-    c = 1.0;
+    dtime = 0.6;
+    gamma = 2.0;  // was 1
     dx = 1.0;
-    tau = (c * dtime / dx);
+    tau = (dtime / dx);
     sqtau = tau * tau;
     fxnp1[i] = (2.0 * fxn[i]) - fxnm1[i]
-      + (sqtau * (fxn[i - 1] - (2.0 * fxn[i]) + fxn[i + 1]));
+      + (sqtau * gamma * (fxn[i - 1] - (2.0 * fxn[i]) + fxn[i + 1]));
   }
   // draw the graph of the string
   void dline(int n) {
     float x, y, px, py;
+    line(0,height/2,width,height/2);
     px = map((float)(n-1), 0, tpoints, 0, width);
-    py = map(fxnp1[n-1], -1, 1, 0, height);
+    py = map(fxnp1[n-1], -1, 1, height/4, 3*height/4);
     x = map((float)n, 0, tpoints, 0, width);
-    y = map(fxnp1[n], -1, 1, 0, height);
+    y = map(fxnp1[n], -1, 1, height/4, 3*height/4);
     line(px, py, x, y);
   }
 };
